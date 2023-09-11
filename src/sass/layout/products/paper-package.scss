@@ -1,0 +1,91 @@
+.paper-package {
+  padding-top: 40px;
+  padding-bottom: 60px;
+
+  .img-wrapper {
+    max-width: 358px;
+    margin-bottom: 24px;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: hidden;
+  }
+
+  .title {
+    @include title;
+    margin-bottom: 48px;
+  }
+  .text {
+    color: $darkColor;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 166.667%;
+  }
+
+  .product-wrapper {
+    @include product-wrapper;
+    .product-text-wrapper {
+      @include product-text-wrapper;
+    }
+  }
+
+  .subtitle {
+    @include subtitle;
+  }
+
+  .text-container {
+    margin-bottom: 36px;
+    p + p {
+      margin-top: 24px;
+    }
+  }
+
+  .btn-link {
+    display: block;
+    max-width: 306px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    @include btn;
+    @include btn-full(600);
+    padding-left: 37px;
+    padding-right: 37px;
+  }
+}
+
+// ============== Tablet styles ==============
+
+@media screen and (min-width: 768px) {
+  .paper-package {
+    .img-wrapper {
+      display: flex;
+      justify-content: center;
+      max-width: 704px;
+      height: 490px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+// ============== Desktop styles ==============
+
+@media screen and (min-width: 1440px) {
+  .paper-package {
+    .title {
+      margin-bottom: 48px;
+    }
+    .product-wrapper {
+      width: 774px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .img-wrapper {
+      img {
+        width: 100%;
+      }
+    }
+    .tel:hover {
+      color: $accentColor;
+    }
+  }
+}

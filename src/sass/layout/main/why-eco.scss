@@ -1,0 +1,188 @@
+.why-eco {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  .image-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 24px;
+
+    .image-wrapper {
+      position: relative;
+      width: 132px;
+      height: 132px;
+
+      .bag-image-wrapper {
+        top: 5;
+        right: 0;
+        position: absolute;
+        width: 112px;
+        height: 112px;
+        padding-top: 8px;
+        padding-bottom: 4px;
+        padding-left: 5px;
+        padding-right: 2px;
+        background: white;
+        border-radius: 200px;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+        display: inline-flex;
+
+        .bag-image {
+          width: 105px;
+          height: 100px;
+        }
+      }
+    }
+
+    .text {
+      width: 217px;
+      color: $darkColor;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 50px;
+    }
+  }
+
+  .main-text-wrapper {
+    margin-bottom: 24px;
+    .text {
+      display: none;
+    }
+  }
+
+  .main-text {
+    color: $darkColor;
+
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 133.333%;
+  }
+
+  .btn-link {
+    @include btn;
+    @include btn-outlined(600);
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    width: 270px;
+    align-items: center;
+    padding-left: 24px;
+    padding-right: 8px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+  }
+}
+
+// ==================  Tablet styles ==================
+
+@media screen and (min-width: 768px) {
+  .why-eco {
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    .why-eco-container {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .image-container {
+      margin-top: 15px;
+      .text {
+        display: none;
+      }
+    }
+
+    .main-text-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      .text {
+        display: block;
+        color: $darkColor;
+
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 156.25%;
+      }
+    }
+
+    .image-container {
+      .image-wrapper {
+        width: 232px;
+        height: 232px;
+        .bag-image-wrapper {
+          width: 200px;
+          height: 200px;
+          right: -4px;
+          .bag-image {
+            width: 170px;
+            height: 160px;
+          }
+        }
+      }
+    }
+    .btn-link {
+      margin-top: 0;
+    }
+  }
+}
+
+// ==================  Desktop styles ==================
+
+@media screen and (min-width: 1440px) {
+  .why-eco {
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    .why-eco-container {
+      display: flex;
+      gap: 139px;
+      align-items: flex-start;
+    }
+
+    .image-container {
+      margin-top: 15px;
+    }
+
+    .main-text-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      .text {
+        display: block;
+        color: $darkColor;
+
+        font-size: 42px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 156.25%;
+      }
+    }
+
+    .image-container {
+      .image-wrapper {
+        width: 432px;
+        height: 432px;
+        .bag-image-wrapper {
+          width: 400px;
+          height: 400px;
+          right: -4px;
+          .bag-image {
+            width: 480px;
+            height: 320px;
+          }
+        }
+      }
+    }
+    .btn-link {
+      margin-top: 0;
+    }
+  }
+}

@@ -1,0 +1,132 @@
+.main-hero {
+  .bcg {
+    background-color: #fafafa;
+    background-image: url(../img/hero-bcg/mobile/image-hero.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 390px 478px;
+  }
+
+  .img-wrap {
+    width: 358px;
+    height: 270px;
+    object-fit: contain;
+  }
+
+  .hero-content-wrapper {
+    padding-top: 290px;
+    padding-bottom: 64px;
+    max-width: 358px;
+    .btn-link {
+      display: inline-block;
+      @include btn;
+      @include btn-full(600);
+      padding-left: 47px;
+      padding-right: 47px;
+    }
+
+    .main-text {
+      margin-bottom: 12px;
+      color: $darkColor;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 60px;
+    }
+
+    .secondary-text {
+      margin-bottom: 26px;
+      color: $darkColor;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 111.111%;
+    }
+  }
+}
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .main-hero {
+    .bcg {
+      background-image: url(../img/hero-bcg/mobile/image-hero@2x.png);
+    }
+  }
+}
+
+// ================  Tablet styles ================
+
+@media screen and (min-width: 768px) {
+  .main-hero {
+    .bcg {
+      background-image: url(../img/hero-bcg/shadow.png),
+        url(../img/hero-bcg/tablet/image-hero.png);
+      background-repeat: no-repeat, no-repeat;
+      background-position: bottom -87px right, center top;
+      background-size: 1810px 300px, 768px 944px;
+    }
+
+    .hero-content-wrapper {
+      padding-top: 424px;
+      padding-bottom: 144px;
+      max-width: 537px;
+
+      .main-text {
+        font-size: 38px;
+      }
+    }
+
+    .img-wrap {
+      width: 342px;
+      height: 280px;
+    }
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .main-hero {
+      .bcg {
+        background-image: url(../img/hero-bcg/shadow.png),
+          url(../img/hero-bcg/tablet/image-hero@2x.png);
+      }
+    }
+  }
+}
+
+// ================  Desktop styles ================
+
+@media screen and (min-width: 1440px) {
+  .main-hero {
+    .bcg {
+      background-image: url(../img/hero-bcg/shadow.png),
+        url(../img/hero-bcg/desktop/image-hero.png);
+      background-repeat: no-repeat, no-repeat;
+      background-position: bottom -93px right 50px, right top;
+      background-size: 1810px 300px, 923px 662px;
+    }
+
+    .hero-content-wrapper {
+      padding-top: 164px;
+      padding-bottom: 172px;
+      max-width: 910px;
+      .main-text {
+        font-size: 48px;
+        margin-bottom: 36px;
+      }
+      .secondary-text {
+        margin-bottom: 36px;
+      }
+    }
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .main-hero {
+      .bcg {
+        background-image: url(../img/hero-bcg/shadow.png),
+          url(../img/hero-bcg/desktop/image-hero@2x.png);
+      }
+    }
+  }
+}

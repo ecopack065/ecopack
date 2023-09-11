@@ -1,0 +1,151 @@
+@mixin contacts-subtitle {
+  margin-bottom: 8px;
+  color: $darkColor;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 166.667%;
+}
+
+@mixin contacts-text {
+  color: $darkColor;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 166.667%;
+}
+
+.contacts {
+  padding-top: 40px;
+  padding-bottom: 60px;
+
+  iframe {
+    width: 100%;
+    height: 358px;
+    margin-bottom: 24px;
+    border-radius: 20px;
+  }
+
+  .title {
+    @include title;
+    margin-bottom: 47px;
+  }
+
+  .subtitle {
+    @include contacts-subtitle;
+  }
+
+  .text {
+    @include contacts-text;
+  }
+
+  .phone-wrapper {
+    margin-bottom: 18px;
+  }
+
+  .email-wrapper {
+    margin-bottom: 18px;
+  }
+
+  .address {
+    width: 292px;
+    margin-bottom: 22px;
+  }
+
+  .contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .button-wrapper {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .to-catalog-btn {
+    @include btn;
+    @include btn-full(700);
+    padding: 17px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .to-home-btn {
+    @include btn;
+    @include btn-outlined(700);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 13px 26px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .contacts {
+    .button-wrapper {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+}
+
+// ============== Tablet styles ==============
+
+@media screen and (min-width: 768px) {
+  .contacts {
+    iframe {
+      margin-top: 24px;
+      width: 100%;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .button-wrapper {
+      justify-content: center;
+      gap: 24px;
+
+      .to-catalog-btn {
+        padding-left: 48px;
+        padding-right: 48px;
+      }
+      .to-home-btn {
+        padding-left: 48px;
+        padding-right: 48px;
+      }
+    }
+    .address {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// ============== Desktop styles ==============
+
+@media screen and (min-width: 1440px) {
+  .contacts {
+    .desktop-style-container {
+      display: flex;
+      gap: 24px;
+      iframe {
+        margin: 0;
+        width: 887px;
+        height: 602px;
+      }
+    }
+    .address {
+      width: auto;
+    }
+    .grid-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .button-wrapper {
+      margin-top: 80px;
+    }
+  }
+}

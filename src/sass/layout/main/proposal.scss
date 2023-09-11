@@ -1,0 +1,155 @@
+.proposal {
+  padding-top: 60;
+  padding-bottom: 60px;
+
+  .title {
+    color: $darkColor;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 187.5%;
+    margin-bottom: 12px;
+  }
+
+  .text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 40px;
+    .text {
+      color: $darkColor;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 133.333%;
+    }
+  }
+
+  .btn-link {
+    @include btn;
+    @include btn-outlined(600);
+    margin-top: 64px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    width: 270px;
+    align-items: center;
+    padding-left: 36px;
+    padding-right: 36px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+  }
+
+  .paper-bag-card {
+    display: none;
+  }
+
+  .t-shirt-bag-card {
+    display: none;
+  }
+
+  .card-container {
+    .img-wrap {
+      max-width: 358px;
+      height: 270px;
+    }
+    .image-subtext {
+      background-color: $accentColor;
+      display: flex;
+      height: 90px;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+
+      color: $lightColor;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 120%;
+      background-image: none;
+      transition: color 300ms $animation, background-color 300ms $animation,
+        border-color 300ms $animation, opacity 300ms $animation,
+        background-image 300ms $animation;
+    }
+  }
+}
+
+// =================== Tablet styles ===================
+
+@media screen and (min-width: 768px) {
+  .proposal {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    .card-container {
+      display: flex;
+      gap: 20px;
+    }
+    .t-shirt-bag-card {
+      display: block;
+    }
+
+    .card-container {
+      .img-wrap {
+        width: 342px;
+        height: 280px;
+      }
+    }
+
+    .image-subtext {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+// =================== Desktop styles ===================
+
+@media screen and (min-width: 1440px) {
+  .proposal {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    .card-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .t-shirt-bag-card {
+      display: block;
+    }
+
+    .paper-bag-card {
+      display: block;
+    }
+
+    .card-container {
+      .img-wrap {
+        width: 432px;
+        height: 288px;
+      }
+      .image-subtext {
+        padding-left: 0;
+        padding-right: 0;
+
+        background-image: url('../img/arrow-right.svg');
+        background-size: 0px 0px;
+        background-position: right 16px top 50%;
+        background-repeat: no-repeat;
+        &:hover {
+          transition: background-size 300ms $animation;
+          background-size: 32px 24px;
+        }
+      }
+    }
+
+    .text-wrapper {
+      width: 658px;
+    }
+
+    .btn-link {
+      margin-top: 72px;
+    }
+  }
+}

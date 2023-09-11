@@ -1,0 +1,116 @@
+.header {
+  height: 80px;
+  display: flex;
+  .header-container {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    display: flex;
+    align-self: center;
+    transition: transform 300ms linear;
+    &:hover {
+      transform: scale(1.05);
+    }
+    span {
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      color: $darkColor;
+    }
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .contacts-list {
+    display: none;
+  }
+}
+
+.secondary-header {
+  .catalog-navigation {
+    display: none;
+  }
+}
+
+// ================ Desktop styles ================
+
+@media screen and (min-width: 1440px) {
+  .header {
+    .burger-icon {
+      display: none;
+    }
+
+    .navigation {
+      display: block;
+      ul {
+        display: flex;
+        gap: 48px;
+        align-items: center;
+        a {
+          color: $darkColor;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          transition: color 300ms linear;
+          &:hover {
+            color: $accentColor;
+          }
+        }
+      }
+    }
+
+    .contacts-list {
+      display: flex;
+      gap: 20;
+      align-items: center;
+      li {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        a {
+          color: $darkColor;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          transition: color 300ms linear;
+          &:hover {
+            color: $accentColor;
+          }
+        }
+      }
+    }
+  }
+  .secondary-header {
+    border-bottom: 2px solid $accentColor;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    .secondary-header-container {
+      width: 100%;
+    }
+    .catalog-navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      a {
+        color: $darkColor;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        transition: color 300ms linear;
+        &:hover {
+          color: $accentColor;
+        }
+      }
+    }
+  }
+}

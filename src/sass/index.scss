@@ -1,0 +1,51 @@
+// utils
+@import './utils/variables.scss';
+@import './utils/mixins.scss';
+@import './utils/hidden.scss';
+
+// Base
+@import './base/common.scss';
+@import './base/reset.scss';
+
+// Components
+@import './components/container.scss';
+
+// Common sections
+@import './header.scss';
+@import './footer.scss';
+
+// Main page
+@import './layout/main/hero.scss';
+@import './layout/main/why-eco.scss';
+@import './layout/main/proposal.scss';
+
+// About page
+@import './layout/about/main.scss';
+
+// Contacts page
+@import './layout/contacts/main.scss';
+
+// Catalog page
+@import './layout/catalog/main.scss';
+
+// Disposal cap page
+@import './layout/products/disposal-cup.scss';
+
+// Inseide bags page
+@import './layout/products/t-shirt-package.scss';
+
+// Packaging bags page
+@import './layout/products/packaging-bags.scss';
+
+// Inside bags page
+@import './layout/products/inside-bags.scss';
+
+// Paper bags page
+@import './layout/products/paper-package.scss';
+
+// Recycled bags page
+@import './layout/products/recycled-bags.scss';
+
+// Modal menu
+
+@import './layout/modals/menu.scss';

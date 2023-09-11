@@ -1,0 +1,89 @@
+.t-shirt-package {
+  padding-top: 40px;
+  padding-bottom: 60px;
+
+  .img-wrapper {
+    max-width: 358px;
+    margin-bottom: 24px;
+    overflow: hidden;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 20px;
+  }
+
+  .title {
+    @include title;
+    margin-bottom: 48px;
+  }
+  .text {
+    color: $darkColor;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 166.667%;
+  }
+
+  .product-wrapper {
+    @include product-wrapper;
+    .product-text-wrapper {
+      @include product-text-wrapper;
+    }
+  }
+
+  .subtitle {
+    @include subtitle;
+  }
+
+  p + p {
+    margin-top: 36px;
+  }
+
+  .btn-link {
+    display: block;
+    max-width: 306px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    @include btn;
+    @include btn-full(600);
+    padding-left: 37px;
+    padding-right: 37px;
+  }
+}
+
+// ============== Tablet styles ==============
+
+@media screen and (min-width: 768px) {
+  .t-shirt-package {
+    .img-wrapper {
+      display: flex;
+      justify-content: center;
+      max-width: 704px;
+      height: 490px;
+      margin-bottom: 24px;
+    }
+  }
+}
+
+// ============== Desktop styles ==============
+
+@media screen and (min-width: 1440px) {
+  .t-shirt-package {
+    .title {
+      margin-bottom: 48px;
+    }
+    .product-wrapper {
+      width: 774px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .img-wrapper {
+      img {
+        width: 100%;
+      }
+    }
+    .tel:hover {
+      color: $accentColor;
+    }
+  }
+}

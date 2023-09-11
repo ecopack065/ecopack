@@ -1,0 +1,240 @@
+.about-main {
+  padding-top: 40;
+  padding-bottom: 60px;
+  .title {
+    @include title;
+  }
+
+  .text {
+    color: $darkColor;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 155.556%;
+  }
+
+  .subtitle {
+    color: $darkColor;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+  }
+
+  .first-part-text {
+    margin-bottom: 12px;
+  }
+
+  .second-part-text {
+    margin-bottom: 20px;
+  }
+
+  .third-part-text {
+    margin-bottom: 20px;
+  }
+
+  .fourth-part-text {
+    margin-bottom: 20px;
+  }
+
+  .uniq-wrapper {
+    height: 308px;
+    padding: 24px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: self-end;
+    justify-content: space-between;
+
+    border-radius: 20px;
+    background: $lightColor;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
+  }
+
+  .eco-wrapper {
+    max-width: 358px;
+    height: 308px;
+    margin-bottom: 20px;
+    position: relative;
+    padding: 24px;
+    display: flex;
+    align-items: self-end;
+    justify-content: space-between;
+
+    border-radius: 20px;
+    background: $lightColor;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
+
+    .subtitle {
+      z-index: 100;
+    }
+
+    .img-wrapper {
+      position: absolute;
+      max-width: 330px;
+      height: 278px;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  .uniq-wrapper {
+    .img-wrapper {
+      height: 100%;
+    }
+  }
+  .btn-link {
+    display: block;
+    max-width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+    @include btn;
+    @include btn-full(600);
+    padding-left: 47px;
+    padding-right: 47px;
+  }
+  .btn-link-desktop {
+    display: none;
+  }
+}
+
+// ============== Tablet styles ==============
+@media screen and (min-width: 768px) {
+  .about-main {
+    .first-wrap {
+      margin-bottom: 47px;
+
+      display: grid;
+      grid-template-columns: 362px 342px;
+      grid-template-rows: 60px 224px 112px;
+      grid-row-gap: 24px;
+
+      .first-part-text {
+        margin-bottom: 0;
+        grid-column: 1;
+        grid-row: 2;
+      }
+
+      .second-part-text {
+        margin-bottom: 0;
+        grid-row: 3/3;
+        grid-column: 1/3;
+      }
+
+      .uniq-wrapper {
+        grid-column: 2;
+        grid-row: 1/3;
+      }
+    }
+
+    .second-wrap {
+      margin-bottom: 48px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 308px 112px;
+      grid-column-gap: 20px;
+      grid-row-gap: 24px;
+
+      .third-part-text {
+        margin-bottom: 0;
+        grid-area: 1/2/2/2;
+      }
+      .fourth-part-text {
+        margin-bottom: 0;
+        grid-area: 2/1/2/3;
+      }
+    }
+  }
+}
+
+// ============== Desktop styles ==============
+@media screen and (min-width: 1440px) {
+  .about-main {
+    .first-wrap {
+      margin-bottom: 47px;
+
+      display: grid;
+      height: 354px;
+      grid-template-columns: 756px 546px;
+      grid-template-rows: 88px 100px 84px;
+      grid-row-gap: 0;
+      grid-column-gap: 46px;
+
+      .first-part-text {
+        margin-bottom: 0;
+        grid-column: 1;
+        grid-row: 2;
+      }
+
+      .second-part-text {
+        margin-bottom: 0;
+        grid-row: 3;
+        grid-column: 1;
+      }
+
+      .uniq-wrapper {
+        position: relative;
+        width: 546px;
+        height: 354px;
+        grid-column: 2;
+        grid-row: 1/4;
+
+        .img-wrapper {
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 95px;
+        }
+      }
+    }
+
+    .second-wrap {
+      margin-bottom: 48px;
+      height: 354px;
+      display: grid;
+      grid-template-columns: 0.4377fr 0.5622fr;
+      grid-template-rows: 0.33fr 0.33fr 0.33fr;
+      grid-column-gap: 0;
+      grid-row-gap: 24px;
+
+      .eco-wrapper {
+        max-width: 546px;
+        height: 354px;
+        margin-bottom: 0;
+        grid-column: 1;
+        grid-row: 1/4;
+        .img-wrapper {
+          max-width: 419px;
+          height: 345px;
+          right: 0;
+          top: 0;
+        }
+      }
+
+      .third-part-text {
+        margin-bottom: 0;
+        grid-area: 1/2/2/2;
+      }
+      .fourth-part-text {
+        margin-bottom: 0;
+        grid-area: 2/2/2/3;
+      }
+
+      .btn-link-desktop {
+        display: block;
+        grid-column: 2;
+        grid-row: 3;
+        align-self: center;
+
+        display: block;
+        width: 300px;
+        @include btn;
+        @include btn-full(600);
+        padding-left: 47px;
+        padding-right: 47px;
+      }
+    }
+    .btn-link {
+      display: none;
+    }
+  }
+}
